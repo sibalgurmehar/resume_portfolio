@@ -4,308 +4,339 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gurmehar Kaur Sibal — AI Researcher & Data Scientist</title>
-  <meta name="description" content="Portfolio of Gurmehar Kaur Sibal — AI Researcher and Data Scientist. MS Computer Science @ Texas A&M. Machine learning, data engineering, and applied AI research." />
+  <meta name="description" content="Gurmehar Kaur Sibal — AI Researcher & Data Scientist. MS Computer Science at Texas A&M. I build machine-learning systems for high-stakes data across healthcare, finance, and security." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gurmehar Kaur Sibal — AI Researcher & Data Scientist" />
+  <meta property="og:description" content="I build machine-learning systems that turn noisy, high-stakes data into signals people can act on." />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="grain"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand">GKS</a>
+    <a href="#top" class="nav__brand"><span>Gurmehar</span> Kaur Sibal</a>
     <nav class="nav__links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#research">Research</a>
-      <a href="#skills">Skills</a>
+      <a href="#about"><span class="nav__idx">01</span> About</a>
+      <a href="#work"><span class="nav__idx">02</span> Work</a>
+      <a href="#projects"><span class="nav__idx">03</span> Projects</a>
+      <a href="#research"><span class="nav__idx">04</span> Research</a>
+      <a href="#contact"><span class="nav__idx">05</span> Contact</a>
     </nav>
-    <a href="#contact" class="nav__cta">Get in touch</a>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle theme">◐</button>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle light / dark theme">
+      <span class="nav__toggle-dot"></span>
+    </button>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero__inner">
-      <p class="hero__eyebrow reveal">AI Researcher · Data Scientist</p>
-      <h1 class="hero__title reveal">Gurmehar<br />Kaur Sibal</h1>
+      <p class="hero__hi reveal">Hi, I'm Gurmehar &mdash; nice to meet you.</p>
+      <h1 class="hero__title">
+        <span class="line reveal">I build <em>intelligent</em></span>
+        <span class="line reveal">systems from</span>
+        <span class="line reveal">messy, high&#8209;stakes data.</span>
+      </h1>
       <p class="hero__lede reveal">
-        I build machine-learning systems that turn noisy, high-stakes data into
-        signals people can act on — from biomedical search and risk prediction to
-        product propensity models and secure AI for clinical workflows.
+        AI Researcher &amp; Data Scientist, currently earning my MS in Computer Science
+        at <strong>Texas A&amp;M</strong>. I turn noisy signals into decisions people can trust &mdash;
+        across healthcare, finance, and security.
       </p>
       <div class="hero__actions reveal">
-        <a href="#projects" class="btn btn--primary">View my work</a>
-        <a href="#contact" class="btn btn--ghost">Contact</a>
-      </div>
-      <div class="hero__meta reveal">
-        <span><strong>MS CS</strong> · Texas A&M</span>
-        <span class="dot"></span>
-        <span><strong>4.0</strong> GPA</span>
-        <span class="dot"></span>
-        <span><strong>Patent</strong> holder</span>
-        <span class="dot"></span>
-        <span><strong>IEEE</strong> published</span>
+        <a href="#projects" class="btn btn--primary">See what I've built <span aria-hidden="true">→</span></a>
+        <a href="#contact" class="btn btn--ghost">Say hello</a>
       </div>
     </div>
-    <div class="hero__scroll">scroll</div>
+
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>Data Engineering</span><span class="sep">✦</span>
+        <span>Applied Research</span><span class="sep">✦</span>
+        <span>Predictive Analytics</span><span class="sep">✦</span>
+        <span>MLOps</span><span class="sep">✦</span>
+        <span>Full-Stack ML</span><span class="sep">✦</span>
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>Data Engineering</span><span class="sep">✦</span>
+        <span>Applied Research</span><span class="sep">✦</span>
+        <span>Predictive Analytics</span><span class="sep">✦</span>
+        <span>MLOps</span><span class="sep">✦</span>
+        <span>Full-Stack ML</span><span class="sep">✦</span>
+      </div>
+    </div>
   </section>
 
   <main>
     <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="section__head reveal">
-        <span class="section__num">01</span>
-        <h2 class="section__title">About</h2>
-      </div>
-      <div class="about">
-        <div class="about__text reveal">
-          <p>
-            I'm a Computer Science master's student at <strong>Texas A&M University</strong>
-            and an AI Researcher at the AGGIES Lab, where I develop ML-driven predictive
-            analytics for high-risk signal detection across finance, healthcare, and security.
-          </p>
-          <p>
-            My work spans the full data lifecycle — from engineering Airflow &amp; dbt
-            pipelines and productionizing models on Databricks, to statistical modeling,
-            SHAP-based interpretation, and shipping full-stack ML applications. I've published
-            with IEEE, hold a patent in multimodal emotion detection, and enjoy problems where
-            rigorous modeling meets real-world impact.
+    <section class="section about" id="about">
+      <p class="kicker reveal"><span>01</span> About</p>
+      <div class="about__grid">
+        <div class="about__lead reveal">
+          <p class="lead-line">
+            I like problems where <em>rigorous modeling</em> meets
+            <em>real&#8209;world stakes</em>.
           </p>
         </div>
-        <div class="about__stats reveal">
-          <div class="stat">
-            <span class="stat__num">8.72</span>
-            <span class="stat__label">B.E. CGPA · Thapar</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">25%</span>
-            <span class="stat__label">Market coverage lift @ ZS</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">4+</span>
-            <span class="stat__label">Products modeled @ Gusto</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">3+</span>
-            <span class="stat__label">Hackathon awards</span>
+        <div class="about__body reveal">
+          <p>
+            I'm a Computer Science master's student at Texas A&amp;M and an AI Researcher at
+            the <strong>AGGIES Lab</strong>, where I develop ML-driven predictive analytics that
+            surface high-impact risk signals from noisy enterprise data.
+          </p>
+          <p>
+            My work runs the whole length of the data lifecycle &mdash; engineering Airflow &amp; dbt
+            pipelines, productionizing models on Databricks, statistical modeling and SHAP-based
+            interpretation, and shipping full-stack ML applications that people actually use.
+          </p>
+          <p>
+            Along the way I've published with <strong>IEEE</strong>, been granted a <strong>patent</strong>
+            in multimodal emotion detection, and won a few hackathons I'm still proud of. I care about
+            work that's both technically sound and genuinely useful.
+          </p>
+          <div class="about__facts">
+            <div><span class="fact__k">Now</span><span class="fact__v">MS Computer Science · Texas A&amp;M (4.0 GPA)</span></div>
+            <div><span class="fact__k">Before</span><span class="fact__v">B.E. ECE · Thapar Institute (8.72 CGPA)</span></div>
+            <div><span class="fact__k">Based in</span><span class="fact__v">Texas, United States</span></div>
+            <div><span class="fact__k">Focus</span><span class="fact__v">Applied ML · Predictive Analytics · Secure AI</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="section__head reveal">
-        <span class="section__num">02</span>
-        <h2 class="section__title">Experience</h2>
-      </div>
+    <!-- WORK / EXPERIENCE -->
+    <section class="section work" id="work">
+      <p class="kicker reveal"><span>02</span> Where I've worked</p>
       <div class="timeline">
         <article class="job reveal">
-          <div class="job__when">May 2026 — Aug 2026</div>
-          <div class="job__body">
-            <h3 class="job__role">Data Science Intern <span>· Gusto</span></h3>
-            <ul>
-              <li>Built per-product propensity models (HGB, Logistic Regression, XGBoost) across 4+ products in Gusto's Business Money suite; used SHAP and odds ratios to profile best-fit segments and surface cross-product co-adoption patterns for GTM targeting.</li>
-              <li>Prototyped scenario-planner forecasts for payroll, contractor payments, and benefits at a 3–4 month horizon with peer benchmarks by size, industry, and tenure; orchestrated Airflow + dbt pipelines and productionized models on Databricks.</li>
-            </ul>
-          </div>
+          <header class="job__head">
+            <h3 class="job__role">Data Science Intern</h3>
+            <span class="job__org">Gusto</span>
+            <span class="job__when">May 2026 — Aug 2026</span>
+          </header>
+          <ul class="job__points">
+            <li>Built per-product propensity models (HGB, Logistic Regression, XGBoost) across 4+ products in Gusto's Business Money suite; used SHAP and odds ratios to profile best-fit segments and surface cross-product co-adoption patterns for GTM targeting.</li>
+            <li>Prototyped scenario-planner forecasts for payroll, contractor payments, and benefits at a 3–4 month horizon with peer benchmarks by size, industry, and tenure; orchestrated Airflow + dbt pipelines and productionized models on Databricks.</li>
+          </ul>
         </article>
 
         <article class="job reveal">
-          <div class="job__when">Oct 2025 — Present</div>
-          <div class="job__body">
-            <h3 class="job__role">AI Researcher <span>· AGGIES Lab</span></h3>
-            <ul>
-              <li>Developing <strong>HyperSense</strong>, an ML-driven predictive analytics framework that surfaces and prioritizes high-impact risk signals from noisy enterprise data across finance, healthcare, and security.</li>
-              <li>Building ML-based cybersecurity and anomaly-detection frameworks for security-sensitive clinical workflows (nuclear medicine); benchmarking against adversarial and operational threats to inform secure AI adoption.</li>
-            </ul>
-          </div>
+          <header class="job__head">
+            <h3 class="job__role">AI Researcher</h3>
+            <span class="job__org">AGGIES Lab</span>
+            <span class="job__when">Oct 2025 — Present</span>
+          </header>
+          <ul class="job__points">
+            <li>Developing <strong>HyperSense</strong>, an ML-driven predictive analytics framework that surfaces and prioritizes high-impact risk signals from noisy enterprise data across finance, healthcare, and security.</li>
+            <li>Building ML-based cybersecurity and anomaly-detection frameworks for security-sensitive clinical workflows (nuclear medicine); benchmarking against adversarial and operational threats to inform secure AI adoption.</li>
+          </ul>
         </article>
 
         <article class="job reveal">
-          <div class="job__when">Jan 2024 — Jul 2025</div>
-          <div class="job__body">
-            <h3 class="job__role">Decision Analyst Associate <span>· ZS Associates</span></h3>
-            <ul>
-              <li>Delivered data-driven analytics (SQL, Tableau, Python) on HCP engagement and prescribing patterns across a $50M+ pharma portfolio; built segmentation and targeting models shaping Salesforce call planning, brand outreach, and quarterly business reviews.</li>
-              <li>Led competitive intelligence and market-trend analyses using ML (Python) and statistical modeling (SPSS); ran patient and pharmacy segmentation on longitudinal prescription data to inform adherence-based targeting and brand resource allocation, improving market coverage by 25%.</li>
-            </ul>
-          </div>
+          <header class="job__head">
+            <h3 class="job__role">Decision Analyst Associate</h3>
+            <span class="job__org">ZS Associates</span>
+            <span class="job__when">Jan 2024 — Jul 2025</span>
+          </header>
+          <ul class="job__points">
+            <li>Delivered data-driven analytics (SQL, Tableau, Python) on HCP engagement and prescribing patterns across a $50M+ pharma portfolio; built segmentation and targeting models shaping Salesforce call planning, brand outreach, and quarterly business reviews.</li>
+            <li>Led competitive intelligence and market-trend analyses using ML (Python) and statistical modeling (SPSS); ran patient and pharmacy segmentation on longitudinal prescription data to inform adherence-based targeting and brand resource allocation, improving market coverage by <strong>25%</strong>.</li>
+          </ul>
         </article>
 
         <article class="job reveal">
-          <div class="job__when">Jun 2023 — Jul 2023</div>
-          <div class="job__body">
-            <h3 class="job__role">Data Engineering Intern <span>· Indus Towers</span></h3>
-            <ul>
-              <li>Analyzed network outage data, conducted root-cause analysis, and applied predictive modeling in Power BI to improve outage forecasting — enhancing network uptime by up to 15% and reducing downtime.</li>
-            </ul>
-          </div>
+          <header class="job__head">
+            <h3 class="job__role">Data Engineering Intern</h3>
+            <span class="job__org">Indus Towers</span>
+            <span class="job__when">Jun 2023 — Jul 2023</span>
+          </header>
+          <ul class="job__points">
+            <li>Analyzed network outage data, conducted root-cause analysis, and applied predictive modeling in Power BI to improve outage forecasting — enhancing network uptime by up to <strong>15%</strong> and reducing downtime.</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="section__head reveal">
-        <span class="section__num">03</span>
-        <h2 class="section__title">Selected Projects</h2>
-      </div>
-      <div class="projects">
-        <article class="card reveal">
-          <div class="card__top">
-            <h3 class="card__title">BioSeek</h3>
-            <a class="card__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">github ↗</a>
+    <section class="section projects" id="projects">
+      <p class="kicker reveal"><span>03</span> Things I've built</p>
+
+      <article class="project reveal">
+        <div class="project__index">01</div>
+        <div class="project__main">
+          <div class="project__head">
+            <h3 class="project__title">BioSeek</h3>
+            <span class="project__tag">Project Lead</span>
           </div>
-          <p class="card__role">Project Lead</p>
-          <p class="card__desc">
-            Full-stack biomedical literature search platform with lexical, semantic, and
-            hybrid retrieval over PubMed. Surfaces more diverse and semantically coherent
-            evidence than keyword search, with cluster-based exploration.
-          </p>
-          <ul class="tags">
+          <p class="project__pitch">A smarter way to search the world's biomedical literature.</p>
+          <div class="project__detail">
+            <div>
+              <h4>The problem</h4>
+              <p>Keyword search on PubMed misses papers that are conceptually related but worded differently — a real gap when the evidence you need doesn't share your vocabulary.</p>
+            </div>
+            <div>
+              <h4>What I built</h4>
+              <p>A full-stack search platform combining lexical, semantic, and hybrid retrieval, with cluster-based exploration so researchers can browse themes, not just ranked lists — surfacing more diverse and semantically coherent evidence than keyword search alone.</p>
+            </div>
+          </div>
+          <ul class="chips">
             <li>Python</li><li>FastAPI</li><li>Next.js</li><li>FAISS</li><li>sentence-transformers</li>
           </ul>
-        </article>
+          <a class="project__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-        <article class="card reveal">
-          <div class="card__top">
-            <h3 class="card__title">Emosense</h3>
-            <a class="card__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">project ↗</a>
+      <article class="project reveal">
+        <div class="project__index">02</div>
+        <div class="project__main">
+          <div class="project__head">
+            <h3 class="project__title">Emosense</h3>
+            <span class="project__tag">Project Lead</span>
           </div>
-          <p class="card__role">Project Lead</p>
-          <p class="card__desc">
-            Stress-detection and mental-health support system using ECG, facial recognition,
-            and KNN, with mood-based music recommendations and a chatbot. Managed end-to-end
-            execution and team coordination.
-          </p>
-          <ul class="tags">
-            <li>Python</li><li>OpenCV</li><li>NumPy</li><li>Arduino</li>
+          <p class="project__pitch">Reading emotion from the body to support mental health.</p>
+          <div class="project__detail">
+            <div>
+              <h4>The idea</h4>
+              <p>Stress shows up in signals we don't always notice — heart rhythm, facial expression. What if a system could pick up on those and respond with something calming?</p>
+            </div>
+            <div>
+              <h4>What I built</h4>
+              <p>A stress-detection and mental-health support system fusing ECG (via Arduino), facial recognition, and a KNN classifier, paired with mood-based music recommendations and a chatbot. I owned end-to-end execution and coordinated the team.</p>
+            </div>
+          </div>
+          <ul class="chips">
+            <li>Python</li><li>OpenCV</li><li>NumPy</li><li>Arduino</li><li>KNN</li>
           </ul>
-        </article>
+          <a class="project__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">See the project <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-        <article class="card reveal">
-          <div class="card__top">
-            <h3 class="card__title">Guardian</h3>
-            <a class="card__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">devpost ↗</a>
+      <article class="project reveal">
+        <div class="project__index">03</div>
+        <div class="project__main">
+          <div class="project__head">
+            <h3 class="project__title">Guardian</h3>
+            <span class="project__tag">Technical Lead &amp; Frontend</span>
           </div>
-          <p class="card__role">Technical Lead &amp; Frontend Developer</p>
-          <p class="card__desc">
-            Web app for safest routes using K-Means clustering, with integrated safety
-            features like fake alerts via the Dasha AI API. Conceptualized, built the
-            frontend, and coordinated development.
-          </p>
-          <ul class="tags">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Machine Learning</li>
+          <p class="project__pitch">Getting people home by the safest route, not just the fastest.</p>
+          <div class="project__detail">
+            <div>
+              <h4>The problem</h4>
+              <p>Maps optimize for speed. They don't tell you which route is actually safe to walk at night.</p>
+            </div>
+            <div>
+              <h4>What I built</h4>
+              <p>A web app that clusters safety data with K-Means to recommend safer routes, with built-in safety features like fake calls / alerts powered by the Dasha AI API. I conceptualized it, built the frontend, and coordinated development.</p>
+            </div>
+          </div>
+          <ul class="chips">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>K-Means</li><li>Dasha AI</li>
           </ul>
-        </article>
-      </div>
+          <a class="project__link" href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">View on Devpost <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </section>
 
     <!-- RESEARCH -->
-    <section class="section" id="research">
-      <div class="section__head reveal">
-        <span class="section__num">04</span>
-        <h2 class="section__title">Publications &amp; Patents</h2>
-      </div>
-      <div class="research">
-        <article class="pub reveal">
-          <span class="pub__year">2026</span>
-          <div class="pub__body">
-            <h3>A Comparative Analysis of SWIFT and Blockchain-Based Payment Networks</h3>
-            <p class="pub__venue">Accepted · IEEE Conference on Generative AI for Secure Systems</p>
-            <p>Comparative study of SWIFT interbank messaging vs. blockchain payment networks across performance, security, cost, and settlement — evaluating architectural trade-offs for infrastructure modernization.</p>
-          </div>
-        </article>
+    <section class="section research" id="research">
+      <p class="kicker reveal"><span>04</span> Research, patents &amp; recognition</p>
 
-        <article class="pub reveal">
-          <span class="pub__year">2024</span>
-          <div class="pub__body">
-            <h3>An Automated Multimodal System for Emotion Detection as Biomarker &amp; Associated Music Therapy <span class="badge">Patent</span></h3>
-            <p class="pub__venue">Patent № 572643</p>
-            <p>Granted patent for an ML-driven multimodal system detecting emotion from physiological and facial biosignals and delivering biomarker-guided music therapy.</p>
-          </div>
-        </article>
+      <div class="research__grid">
+        <div class="pubs">
+          <h3 class="sub reveal">Publications &amp; Patents</h3>
 
-        <article class="pub reveal">
-          <span class="pub__year">2023</span>
-          <div class="pub__body">
-            <h3>Detection of Mental Stress Using Biosignals Through Machine Learning — A Brief Survey</h3>
-            <p class="pub__venue">International Conference on Innovative Trends in Electronics Engineering</p>
-            <p>Explored biosignals for stress detection, identified ECG as most suitable, and benchmarked ML models to optimize ECG-based stress prediction.</p>
-          </div>
-        </article>
-      </div>
+          <article class="pub reveal">
+            <span class="pub__year">2026</span>
+            <div>
+              <h4>A Comparative Analysis of SWIFT and Blockchain-Based Payment Networks</h4>
+              <p class="pub__venue">Accepted · IEEE Conference on Generative AI for Secure Systems</p>
+              <p class="pub__desc">A study of SWIFT interbank messaging vs. blockchain payment networks across performance, security, cost, and settlement — weighing the architectural trade-offs of infrastructure modernization.</p>
+            </div>
+          </article>
 
-      <div class="awards reveal">
-        <h3 class="awards__title">Achievements</h3>
-        <ul class="awards__list">
-          <li><span class="awards__date">Mar 2026</span> Best Research Award — Student Research Week, Texas A&amp;M University</li>
-          <li><span class="awards__date">Apr 2023</span> Best Paper Award — Intl. Conference on Innovative Trends in Electronics Engineering</li>
-          <li><span class="awards__date">2021</span> Best First-Time Hack (HackHarvard) · Best Social Impact &amp; Best Use of Google Cloud (HackPrinceton)</li>
-          <li><span class="awards__date">2024</span> IBM — Data Visualization in Python (Matplotlib, Folium, Plotly, Dash)</li>
-        </ul>
+          <article class="pub reveal">
+            <span class="pub__year">2024</span>
+            <div>
+              <h4>Automated Multimodal Emotion Detection as a Biomarker &amp; Music Therapy <span class="badge">Patent № 572643</span></h4>
+              <p class="pub__venue">Granted Patent</p>
+              <p class="pub__desc">An ML-driven multimodal system that detects emotion from physiological and facial biosignals and delivers biomarker-guided music therapy.</p>
+            </div>
+          </article>
+
+          <article class="pub reveal">
+            <span class="pub__year">2023</span>
+            <div>
+              <h4>Detection of Mental Stress Using Biosignals Through Machine Learning — A Brief Survey</h4>
+              <p class="pub__venue">Intl. Conference on Innovative Trends in Electronics Engineering</p>
+              <p class="pub__desc">Surveyed biosignals for stress detection, identified ECG as the most suitable, and benchmarked ML models to optimize ECG-based prediction.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="awards">
+          <h3 class="sub reveal">Recognition</h3>
+          <ul>
+            <li class="reveal"><span class="awards__yr">2026</span> Best Research Award — Student Research Week, Texas A&amp;M</li>
+            <li class="reveal"><span class="awards__yr">2023</span> Best Paper Award — ICITEE</li>
+            <li class="reveal"><span class="awards__yr">2021</span> Best First-Time Hack — HackHarvard</li>
+            <li class="reveal"><span class="awards__yr">2021</span> Best Social Impact &amp; Best Use of Google Cloud — HackPrinceton</li>
+            <li class="reveal"><span class="awards__yr">2024</span> IBM — Data Visualization in Python</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="section__head reveal">
-        <span class="section__num">05</span>
-        <h2 class="section__title">Technical Skills</h2>
-      </div>
-      <div class="skills">
+    <section class="section skills" id="skills">
+      <p class="kicker reveal"><span>05</span> The toolkit</p>
+      <div class="skills__grid">
         <div class="skillgroup reveal">
           <h3>Languages</h3>
-          <ul><li>C / C++</li><li>Python</li><li>SQL</li><li>Keil ARM Assembly</li></ul>
+          <p>C / C++ · Python · SQL · Keil ARM Assembly</p>
         </div>
         <div class="skillgroup reveal">
           <h3>ML / Data Science</h3>
-          <ul><li>scikit-learn</li><li>XGBoost</li><li>HGB</li><li>Logistic Regression</li><li>SHAP</li><li>PyTorch</li><li>TensorFlow</li><li>sentence-transformers</li><li>FAISS</li></ul>
+          <p>scikit-learn · XGBoost · HGB · Logistic Regression · SHAP · PyTorch · TensorFlow · sentence-transformers · FAISS</p>
         </div>
         <div class="skillgroup reveal">
           <h3>Data Engineering &amp; MLOps</h3>
-          <ul><li>Airflow</li><li>dbt</li><li>Databricks</li><li>Snowflake</li></ul>
+          <p>Airflow · dbt · Databricks · Snowflake</p>
         </div>
         <div class="skillgroup reveal">
           <h3>Analysis &amp; Visualization</h3>
-          <ul><li>Excel</li><li>MATLAB</li><li>Tableau</li><li>Power BI</li><li>SPSS</li><li>Matplotlib</li><li>OpenCV</li><li>NumPy</li><li>Pandas</li></ul>
+          <p>Excel · MATLAB · Tableau · Power BI · SPSS · Matplotlib · OpenCV · NumPy · Pandas</p>
         </div>
         <div class="skillgroup reveal">
-          <h3>Web &amp; Developer Tools</h3>
-          <ul><li>HTML</li><li>CSS</li><li>Tailwind</li><li>FastAPI</li><li>Next.js</li><li>React</li><li>Git</li><li>VS Code</li><li>Jupyter</li></ul>
-        </div>
-        <div class="skillgroup reveal">
-          <h3>Education</h3>
-          <ul><li>MS Computer Science — Texas A&amp;M (4.0)</li><li>B.E. ECE — Thapar Institute (8.72)</li></ul>
+          <h3>Web &amp; Tools</h3>
+          <p>HTML · CSS · Tailwind · FastAPI · Next.js · React · Git · VS Code · Jupyter</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section contact" id="contact">
-      <div class="reveal">
-        <p class="contact__eyebrow">Let's build something</p>
-        <h2 class="contact__title">Get in touch</h2>
-        <p class="contact__lede">
-          Open to research collaborations, data science roles, and interesting problems.
-        </p>
-        <div class="contact__links">
-          <a href="mailto:sibalgurmehar@gmail.com" class="btn btn--primary">sibalgurmehar@gmail.com</a>
-          <a href="https://linkedin.com/in/gurmeharsibal" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
-          <a href="tel:+19795748067" class="btn btn--ghost">+1 (979) 574-8067</a>
-        </div>
+      <p class="kicker reveal"><span>06</span> Let's talk</p>
+      <h2 class="contact__title reveal">Have a problem worth<br /><em>solving together?</em></h2>
+      <p class="contact__lede reveal">I'm open to research collaborations, data science roles, and interesting problems. The fastest way to reach me is email.</p>
+      <a href="mailto:sibalgurmehar@gmail.com" class="contact__email reveal">sibalgurmehar@gmail.com</a>
+      <div class="contact__socials reveal">
+        <a href="https://linkedin.com/in/gurmeharsibal" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/sibalgurmehar" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="tel:+19795748067">+1 (979) 574-8067</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <span>© <span id="year"></span> Gurmehar Kaur Sibal</span>
-    <span>Designed &amp; built with care.</span>
+    <a href="#top" class="footer__top">Back to top ↑</a>
   </footer>
 
   <script src="script.js"></script>
