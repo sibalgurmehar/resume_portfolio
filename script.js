@@ -1,61 +1,37 @@
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Theme (persisted; light is default)
-const root = document.documentElement;
-const toggle = document.getElementById("navToggle");
-const saved = localStorage.getItem("theme");
-if (saved) root.setAttribute("data-theme", saved);
-toggle.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-});
-
-// Nav border on scroll + scroll progress bar
-const nav = document.getElementById("nav");
+const header = document.getElementById("header");
 const progress = document.getElementById("progress");
-const onScroll = () => {
-  nav.classList.toggle("scrolled", window.scrollY > 24);
-  const h = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+const navLinks = [...document.querySelectorAll(".nav a")];
+const sections = [...document.querySelectorAll("main section[id]")];
+
+const updatePageState = () => {
+  header.classList.toggle("scrolled", window.scrollY > 20);
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0}%`;
+
+  let activeId = "";
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= 150) activeId = section.id;
+  });
+  navLinks.forEach((link) => link.classList.toggle("active", link.hash === `#${activeId}`));
 };
-onScroll();
-window.addEventListener("scroll", onScroll, { passive: true });
 
-// Reveal on scroll
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-);
-document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+window.addEventListener("scroll", updatePageState, { passive: true });
+updatePageState();
 
-// Hero headline lines — staggered reveal on load
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("in");
+    revealObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.08, rootMargin: "0px 0px -36px" });
+
+document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
 window.addEventListener("load", () => {
-  document.querySelectorAll(".hero__title .line").forEach((line, i) => {
-    setTimeout(() => line.classList.add("in"), 200 + i * 130);
+  document.querySelectorAll(".hero-reveal").forEach((element, index) => {
+    window.setTimeout(() => element.classList.add("in"), 80 + index * 85);
   });
 });
 
-// Cursor spotlight (pointer-fine devices only)
-const spotlight = document.getElementById("spotlight");
-if (window.matchMedia("(pointer: fine)").matches) {
-  let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
-  const loop = () => {
-    cx += (tx - cx) * 0.12;
-    cy += (ty - cy) * 0.12;
-    spotlight.style.transform = `translate(${cx}px, ${cy}px)`;
-    raf = Math.abs(tx - cx) > 0.5 || Math.abs(ty - cy) > 0.5 ? requestAnimationFrame(loop) : null;
-  };
-  window.addEventListener("mousemove", (e) => {
-    tx = e.clientX; ty = e.clientY;
-    if (!raf) raf = requestAnimationFrame(loop);
-  }, { passive: true });
-}
+document.getElementById("year").textContent = new Date().getFullYear();
